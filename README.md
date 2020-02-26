@@ -8,4 +8,4 @@ Team Member Names ---
 
 # first readme commit
 
-Temp change to taste
+Temp change to tast
