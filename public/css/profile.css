@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i&display=swap');
+
+/*For mobile view*/
+
+* {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: lightseagreen;
+    text-decoration: none;
+}
+
+a:active {
+    color: blue;
+    text-decoration: none;
+}
+
+h1 {
+    padding-top: 0.5em;
+    padding-bottom: 0.7em;
+    border-bottom: 1px solid lightgrey;
+}
+
+h3 {
+    padding: 0.5em 3em;
+    text-align: left;
+}
+
+
+/* grid-structure */
+
+.structure {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0.8em;
+    color: black;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.headbar {
+    background-color: lightblue;
+    padding: 0.8em 0;
+}
+
+.profile_block {
+    text-align: center;
+}
+
+.profile_pic {
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    .structure {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 0.8em;
+        color: black;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+}
