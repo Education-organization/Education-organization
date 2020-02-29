@@ -1,0 +1,170 @@
+body {
+	background-color: #ddd;
+	font: 1em helvetica, sans-serif;
+}
+
+.header {
+	background-color: rgb(182, 182, 178);
+	padding: 1em 1em;
+}
+.router{
+	display: grid;
+	list-style-type: none;
+}
+.main {
+	padding: 0 1em;
+}
+.advortizement{
+	background-image: url(/images/bghead.jpeg);
+
+	min-height: 40em;
+	background-repeat: no-repeat;
+	background-size: contain;
+background-position: initial;
+}
+
+.aboutUs{
+ background-image: url(/images/Humber_College_2.jpg);
+  filter: blur(0.125);
+	-webkit-filter: blur(0.125); 
+	min-height: 25em;
+	background-repeat: no-repeat;
+
+	/* position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0; */
+
+	background:black;
+	background:rgba(0,0,0,0.01);
+
+/*	filter:blur(4px);
+	-o-filter:blur(4px);
+	-ms-filter:blur(4px);
+	-moz-filter:blur(4px);
+	-webkit-filter:blur(4px); */
+}
+	/* .advortizement img{
+ margin-left:50em; 
+	padding-left: 10em;
+}  */
+.footer {
+	background-color: grey;
+	color: white;
+	padding: 1em;
+	text-align: center;
+}
+html{
+  margin: 0;
+  padding: 0;
+
+}
+body{
+  background-color:#edf1f3;
+  
+  
+}
+.header img{
+  display: inline;
+  position: absolute;
+    max-width: 4em;
+    
+  } 
+  .router{
+    display: grid;
+    grid-gap: 0.125em;
+		 text-align: right;
+		 text-decoration: none;
+		 text-align: center;
+    /* border: 0.25em  solid black; */
+  
+  }
+
+  .router li a{
+    text-align: right;
+  text-decoration: none;
+  }
+
+.footer .router{
+	display: grid;
+	list-style-type: none;
+}
+.footer  ul{
+	display: grid;
+	list-style-type: none;
+
+}
+ 
+/* Tablet */
+@media screen and (min-width: 40em) {
+
+	.header img{
+		display: inline;
+		position: absolute;
+			max-width: 4em;
+			
+		} 
+		
+		.router{
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+			/* border: 0.25em  solid black; */
+			/* text-align: right; */
+			list-style-type: none;
+		}
+		.router li a{
+		text-decoration: none;
+		}
+		
+		.footer .router{
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+			margin-left: 4em;
+			grid-gap: 1em;
+			list-style-type: none;
+		}
+		.footer  ul{
+			grid-template-columns: 1fr;
+			list-style-type: none;
+		
+		}
+
+		}
+		
+
+ 
+/* Desktop */
+@media screen and (min-width: 65em) {
+
+.header img{
+display: inline;
+position: absolute;
+	max-width: 4em;
+	text-decoration: none;
+  
+} 
+
+.router{
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+	list-style-type: none;
+  /* border: 0.25em  solid black; */
+	/* text-align: right; */
+	list-style-type: none;
+}
+.router li a{
+text-decoration: none;
+}
+
+.footer .router{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  margin-left: 4em;
+	grid-gap: 1em;
+	list-style-type: none;
+}
+
+.footer  ul{
+	grid-template-columns: 1fr;
+	list-style-type: none;
+
+}
+
+}

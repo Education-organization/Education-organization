@@ -1,0 +1,23 @@
+{
+  "name": "Education-organization",
+  "version": "1.0.0",
+  "description": "Team Member Names --- \r 1) Dimpy Vaidya (N01406287)\r 2) Bhawanpreet Kaur Sidhu (N01372787)\r 3)  Shreya Trivedi (n01362595)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Education-organization/Education-organization.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Education-organization/Education-organization/issues"
+  },
+  "homepage": "https://github.com/Education-organization/Education-organization#readme",
+  "dependencies": {
+    "express-handlebars": "^3.1.0"
+  }
+}
