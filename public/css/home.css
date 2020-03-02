@@ -19,7 +19,7 @@ body {
 
 } */
 .router li img{
-	min-width: 7em;
+	min-width: 5em;
 
 	
 }
@@ -40,6 +40,19 @@ display: block;
 margin-left: 3em; 
 margin-bottom: -2.5em;
 margin-bottom: -30em; */
+margin: 3em;
+padding: 8em;
+text-shadow: blue;
+opacity: 1em;
+
+}
+.advortizement b{
+	text-align: center;
+padding: 5em;
+color: rgb(10, 14, 241);
+margin: 4em;
+padding: 2em;
+font-size: 1.5em;
 }
 
 .aboutUs{
@@ -64,6 +77,9 @@ margin-bottom: 2em;
 	margin: 3em;
 	text-align: center;
 	line-height: 4em;
+}
+.quote b{
+	font-size: 2em;
 }
 
 .footer {
@@ -96,7 +112,8 @@ body{
 		 text-align: center;
     /* border: 0.25em  solid black; */
   
-  }
+	}
+	
   .one{
 		margin-top: 3em;
 	}
