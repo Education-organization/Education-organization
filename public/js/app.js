@@ -4,71 +4,71 @@ import Student from '/js/pages/student_profile.js'
 import About from '/js/pages/About.js'
 // Store a few references
 // const $routes = document.querySelectorAll('.router a')
-const $main =   document.querySelector('.main')
+const $main = document.querySelector('.main')
 
 // Create our page routes
 const routes = {
-	home: new Home(),
-	Programs: new Programs(),
-	student_profile: new Student(),
-	About: new About()
+    home: new Home(),
+    Programs: new Programs(),
+    student_profile: new Student(),
+    About: new About()
 }
 
 // Load new page content
-const gotoPage = (name, subs=null) => {
-	if (!routes[name]) {
-		name = 'home'  // Actually, do a "404"
-	}
-	// $main.innerHTML = routes[name].getHTML() 
-	routes[name].render($main) // Put the HTML in the container, AND setup events
+const gotoPage = (name, subs = null) => {
+    if (!routes[name]) {
+        name = 'home' // Actually, do a "404"
+    }
+    // $main.innerHTML = routes[name].getHTML() 
+    routes[name].render($main) // Put the HTML in the container, AND setup events
 
-	if (subs) {
-		routes[name].subrequests(subs)
-	}
+    if (subs) {
+        routes[name].subrequests(subs)
+    }
 }
 
 // If someone uses the browser back/forward functionality, redirect
 window.addEventListener('popstate', event => {
-	const route = event.state.path
-	gotoPage(route);
+    const route = event.state.path
+    gotoPage(route);
 })
 
 // When the page loads...
 window.addEventListener('load', event => {
 
-	// Get the page url and load the Page based on the pathname
-	const path = window.location.pathname.replace(/^\/+/g, '').split('/')
-	const route = path[0]
-	const subrequests = path.slice(1)
+    // Get the page url and load the Page based on the pathname
+    const path = window.location.pathname.replace(/^\/+/g, '').split('/')
+    const route = path[0]
+    const subrequests = path.slice(1)
 
 
-	if (route == '') {
-		gotoPage('home', subrequests)
-	} else {
-		gotoPage(route, subrequests)
-	}
+    if (route == '') {
+        gotoPage('home', subrequests)
+    } else {
+        gotoPage(route, subrequests)
+    }
 
-	
-	// When anything is clicked
-	window.addEventListener('click', event => {
 
-		// For all `.router a`...
-		if (event.target.matches('.router a')) {
+    // When anything is clicked
+    window.addEventListener('click', event => {
 
-			const $link = event.target;
+        // For all `.router a`...
+        if (event.target.matches('.router a')) {
 
-			event.preventDefault() // Stop the browser from redirecting
+            const $link = event.target;
 
-			// Go to the page specified in the href
-			const path = $link.getAttribute('href').replace(/^\/+/g, '').split('/')
-			const route = path[0]
-			const subrequests = path.slice(1)
-			
-			gotoPage(route, subrequests)
+            event.preventDefault() // Stop the browser from redirecting
 
-			// Add browser history so we can go back/forward
-			window.history.pushState({path:`/${route}/${subrequests.join('/')}`}, '', `/${route}/${subrequests.join('/')}`)
-		}
-	})
+            // Go to the page specified in the href
+            const path = $link.getAttribute('href').replace(/^\/+/g, '').split('/')
+            const route = path[0]
+            const subrequests = path.slice(1)
+
+            gotoPage(route, subrequests)
+
+            // Add browser history so we can go back/forward
+            window.history.pushState({ path: `/${route}/${subrequests.join('/')}` }, '', `/${route}/${subrequests.join('/')}`)
+        }
+    })
 
 })
