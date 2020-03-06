@@ -1,153 +1,116 @@
-html{
-  margin: 0;
-  padding: 0;
 
-}
-
-body {
-  background-color:#edf1f3;
-	font: 1em helvetica, sans-serif;
-}
-
-.header {
-
-	padding: 1em 0;
-}
-.router{
-	display: grid;
-	list-style-type: none;
-
-}
- /* img{
-min-width: 15em;
-padding-bottom: 25em;
-margin-bottom: 20em;
-} */
-.router li a{
-	color: #222222;
-}
-.main {
-	padding: 0 1em;
-}
-
-.footer {
-	background-color: #222222;
-	color: white;
-	padding: 1em;
-}
-.footer li a{
-	color: white;
-}
-.footer p {
-	text-align: center;
-}
-
-.header img{
-  display: inline;
-  position: absolute;
-    max-width: 4em;
-    
-  } 
-  .router{
-    display: grid;
-    grid-gap: 0.125em;
-		 text-align: right;
-		 text-decoration: none;
-    /* border: 0.25em  solid black; */
+.main-heading{
+ margin: 0;
+padding: 0;
+width: 100%;
+height : 18vh;
+background-color:rgb(240, 243, 248);
+border-top: 0.1rem solid  rgb(217, 222, 228); 
   
-  }
+	}
 
-  .router li a{
-    text-align: right;
-  text-decoration: none;
-  }
-
-.footer .router{
-	display: grid;
-	list-style-type: none;
-}
-.footer  ul{
-	display: grid;
-	list-style-type: none;
-
-}
- 
-/* Tablet */
-@media screen and (min-width: 40em) {
-
-	.header img{
-		display: inline;
-		position: absolute;
-			max-width: 4em;
-			
-		} 
-		
-		.router{
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-			/* border: 0.25em  solid black; */
-			/* text-align: right; */
-			list-style-type: none;
-		}
-		.router li a{
+	.logo{
+		top: 1em;
+		margin : 1em;
+		text-align: left;
+		 
+	   }
+	   .navbar{
+		text-align: right;
+		margin-right: 3em;
+	   }
+	   
+	   .navbar a{
+	   color: rgb(27, 11, 119);
+		font-size: 1.3em;
+		font-weight: bold ;
 		text-decoration: none;
-		}
+	   }
+	   
+	   .navbar ul {
+		list-style-type: none;
+		margin-top: -4em;
+		padding: 0;
 		
-		.footer .router{
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-			margin-left: 4em;
-			grid-gap: 1em;
-			list-style-type: none;
-		}
-		.footer  ul{
-			grid-template-columns: 1fr;
-			list-style-type: none;
+	   }
+	   
+	   .navbar li {
+		display: inline-block;
+		padding: 2rem;
+		   
+	   }
+	   
+	   
+	   .nabvbar li a {
+		display: block;
+		color: rgb(27, 11, 119);
+	   
+		padding: 0.1em 0.5em; 
+	   text-decoration: none;
+	   }
+	   
+	   .navbar li a:hover {
+		color:  rgb(212, 171, 37);
+		text-decoration: underline;
+	   }
+	   
+	   
+	   .footer-area{
+		width: 100%;
+		display: block;
+		background-color: rgb(19, 21, 22);
+		color: white;
+		 padding: 2em;
+	   }
+	   
+	   
+ .footer-area .explore{
+    padding-right: 13em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    margin-left: 2em;
+	grid-gap: 0.6em;
+	list-style-type: none;
+}
+	   .footer-area ul{
+		list-style-type: none;
+		padding-left: 1.5em;
+		padding-bottom: 0em;
+		margin: 0;
+		line-height: 1.5em;
+	   }
 		
-		}
-
-		}
+	   
+	   .footer-area li a {
+		color:rgb(186, 189, 192) ;
+		text-decoration: none;
+		font-size: 1em;
+	   } 
+	   
+	   .footer-area li a:hover {
+		text-decoration: underline;
 		
-
- 
-/* Desktop */
-@media screen and (min-width: 65em) {
-.header{
-	color: #222222;
-}
-.header img{
-display: inline;
-position: absolute;
-	max-width: 4em;
-	text-decoration: none;
-  
-} 
-
-.router{
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr  ;
-	list-style-type: none;
-  /* border: 0.25em  solid black; */
-	/* text-align: right; */
-	list-style-type: none;
-	text-align: center;
-}
-.router img{
-
-padding:0 3em;
-}
-.router li a{
-text-decoration: none;
-}
-
-.footer .router{
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin-left: 4em;
-	grid-gap: 1em;
-	list-style-type: none;
-}
-
-.footer  ul{
-	grid-template-columns: 1fr;
-	list-style-type: none;
-
-}
-
-}
+	   }
+	   
+	   
+	  
+	   .footer-area .social li{
+		display: inline-block;
+		text-align: right;
+	   }
+	   
+	   .footer-area .social ul{
+		list-style-type: none;
+		text-align: center;
+		font-size: 2.1em;
+		padding-left: 12em;
+		padding-top: 3em;
+	   }
+	   
+	   .footer-area .social li a{
+		
+		border: black;
+		background-color: rgb(10, 11, 12);
+		padding:0.5rem 0.5rem 0.5rem 0.5rem; 
+	   }
+	   

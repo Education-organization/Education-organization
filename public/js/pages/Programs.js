@@ -1,19 +1,19 @@
 import Page from '../page.js'
 
-export default class About extends Page {
+export default class Programs extends Page {
 	constructor() {
 		super()
         this.html = `
-    <section>
-      <div class="main-image"> </div>
-      <div class="main-heading">
+    <section class="Program-page">
+      <div class="program-image"> </div>
+      <div class="heading-pro">
         <p>CONTINUING EDUCATION</p>
         <h2>Programs List</h2>
       </div>
     </section>
     <section class="program-list">
       <div class="program-row">
-        <div class="program-name-heading"><a href="#">Program Name</a>
+        <div class="program-name-heading"><a href="#">Program</a>
         </div>
         <div class="length-heading">
           <p>Length</p>
@@ -23,7 +23,7 @@ export default class About extends Page {
         </div>
       </div>
       <div class="program-row">
-        <div class="program-name"><a href="#">Web Design and Development</a>
+        <div class="program-name"><a href="webdesign">Web Design and Development</a>
         </div>
         <div class="length">
           <p>2 Semester</p>
@@ -34,7 +34,7 @@ export default class About extends Page {
       </div>
 
       <div class="program-row">
-        <div class="program-name"><a href="#">Advertising and Graphic Design</a>
+        <div class="program-name"><a href="webdesign">Advertising and Graphic Design</a>
         </div>
         <div class="length">
           <p>4 Semester</p>
@@ -114,13 +114,13 @@ export default class About extends Page {
 
     <section class="program-description">
       <article>
-        <div class="program-image"></div>
+        <div class="program-image1"></div>
         <div class="program-highlight">
           <h2>Web Design And Development</h2>
           <p>CERTIFICATE OF ACHIEVEMENT | CODE: WDD911</p>
         </div>
       </article>
-
+      
       
     </section>
   `
@@ -147,7 +147,7 @@ export default class About extends Page {
               
            This program is not eligible for Ontario Student Assistance Program (OSAP). It is eligible for Second Career Funding. Further details and how to apply are found at ontario.ca/page/second-career.</p>
           </div>`
-        		} else if (path[0] == 'advertising') {
+        		} else if (path[0] == 'webdesign') {
 			$info.innerHTML = `<h3>Advertising and Graphic Design</h3>
             <div class="about-pro">
             <h3>About the Program </h3>

@@ -1,7 +1,7 @@
 import Home from '/js/pages/home.js'
 import Programs from '/js/pages/Programs.js'
 import Student from '/js/pages/student_profile.js'
-
+import About from '/js/pages/About.js'
 // Store a few references
 // const $routes = document.querySelectorAll('.router a')
 const $main =   document.querySelector('.main')
@@ -10,7 +10,8 @@ const $main =   document.querySelector('.main')
 const routes = {
 	home: new Home(),
 	Programs: new Programs(),
-	student_profile: new Student()
+	student_profile: new Student(),
+	About: new About()
 }
 
 // Load new page content
