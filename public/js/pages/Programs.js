@@ -5,7 +5,7 @@ export default class Programs extends Page {
         super()
         this.html = `
 		<header>
-			<h2>Our Programs</h2>
+		
 			<button id="dosomething" style="display:none;">Click me!</button>
     </header>
     <section class="Program-page">
@@ -37,7 +37,7 @@ export default class Programs extends Page {
         <div class="location"><p>North</p></div>
       </ul>
       <ul class="program-row router">
-        <li class="program-name"><a href="Programs/multimedia">Multimedia Design and development</a></li>
+        <li class="program-name"><a href="Programs/multimedia">Visual and Digital Arts </a></li>
         <div class="length"><p>4 Semester</p></div>
         <div class="location"><p>North</p></div>
       </ul>
@@ -67,8 +67,8 @@ export default class Programs extends Page {
           
             <div class="about-pro">
             <strong> <h3>About the Program </h3></strong>
-            <p>If you describe yourself as creative, resourceful, detail-oriented and a problem solver, then Humber's Web Design and Development certificate program is for you. You will learn to critically analyze problems and apply best practices to plan, design and build websites/applications. You will build sites and apps from the ground up using the most up-to-date techniques and fundamental technologies. You will also learn to tackle technical challenges by developing strong troubleshooting and problem solving skills. The solutions you create along your journey will be curated into a captivating portfolio website at the end of the program.
-            You will be constantly challenged to learn more through the escalating curriculum, while working in our dedicated computer lab. You will be guided by experienced faculty and industry professionals who are passionate about the web and related media in a practical, hands-on style of teaching. Opportunities to network with potential employers, alumni and other professionals will help you to build your own network of invaluable contacts to shape your future career.
+            <p>You will be constantly challenged to learn more through the escalating curriculum, while working in our dedicated computer lab. You will be guided by experienced faculty and industry professionals who are passionate about the web and related media in a practical, hands-on style of teaching. Opportunities to network with potential employers, alumni and other professionals will help you to build your own network of invaluable contacts to shape your future career. If you describe yourself as creative, resourceful, detail-oriented and a problem solver, then Humber's Web Design and Development certificate program is for you. You will learn to critically analyze problems and apply best practices to plan, design and build websites/applications. You will build sites and apps from the ground up using the most up-to-date techniques and fundamental technologies. 
+            
            This program is not eligible for Ontario Student Assistance Program (OSAP). It is eligible for Second Career Funding. Further details and how to apply are found at ontario.ca/page/second-career.</p>
           </div>
           </article>`
@@ -86,7 +86,7 @@ export default class Programs extends Page {
           
             <div class="about-pro">
             <strong> <h3>About the Program </h3></strong>
-            <p>If you describe yourself as creative, resourceful, detail-oriented and a problem solver, then Humber's Web Design and Development certificate program is for you. You will learn to critically analyze problems and apply best practices to plan, design and build websites/applications. You will build sites and apps from the ground up using the most up-to-date techniques and fundamental technologies. You will also learn to tackle technical challenges by developing strong troubleshooting and problem solving skills. The solutions you create along your journey will be curated into a captivating portfolio website at the end of the program.
+            <p>You will  learn to tackle technical challenges by developing strong troubleshooting and problem solving skills. The solutions you create along your journey will be curated into a captivating portfolio website at the end of the program.If you describe yourself as creative, resourceful, detail-oriented and a problem solver, then Humber's Web Design and Development certificate program is for you. You will learn to critically analyze problems and apply best practices to plan, design and build websites/applications. You will build sites and apps from the ground up using the most up-to-date techniques and fundamental technologies. You will also learn to tackle technical challenges by developing strong troubleshooting and problem solving skills. The solutions you create along your journey will be curated into a captivating portfolio website at the end of the program.
             You will be constantly challenged to learn more through the escalating curriculum, while working in our dedicated computer lab. You will be guided by experienced faculty and industry professionals who are passionate about the web and related media in a practical, hands-on style of teaching. Opportunities to network with potential employers, alumni and other professionals will help you to build your own network of invaluable contacts to shape your future career.
            This program is not eligible for Ontario Student Assistance Program (OSAP). It is eligible for Second Career Funding. Further details and how to apply are found at ontario.ca/page/second-career.</p>
           </div>
@@ -98,7 +98,7 @@ export default class Programs extends Page {
             $info.innerHTML = `<article class="program-desc">
             <div class="program-image3"></div>
             <div class="program-highlight">
-              <h2>Multimedia Design and development</h2>
+              <h2>Visual and Digital Arts </h2>
               <p>CERTIFICATE OF ACHIEVEMENT | CODE: MDD811</p>
             </div>
           

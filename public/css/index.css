@@ -114,3 +114,13 @@ border-top: 0.1rem solid  rgb(217, 222, 228);
 		padding:0.5rem 0.5rem 0.5rem 0.5rem; 
 	   }
 	   
+	   @media screen and (max-width: 350PX) {
+		.logo{
+			top: 1em;
+			margin : 1em;
+			text-align: center;
+			 
+		   }
+
+		  
+	 }
