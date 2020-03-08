@@ -12,7 +12,7 @@ export default class About extends Page {
       <h1 class="type">Our Programs</h1>
         <div class="course-container">
             <div class="course_block">
-            <img src="/img/Web-developer.jpg" alt="webDesignImage" class="courseimg">
+            <img src="/img/art.jpg" alt="webDesignImage" class="courseimg">
                 <div class="course_content">
                 
                     <h2 class="coursenm">The Faculty Of Media&Arts</h2>
@@ -21,7 +21,7 @@ export default class About extends Page {
                 </div>
             </div>
             <div class="course_block">
-            <img src="/img/creativeArtsMedia.jpg" alt="ArtsandMedia" class="courseimg">
+            <img src="/img/develop.jpg" alt="ArtsandMedia" class="courseimg">
             <div class="course_content">
                 <h2 class="coursenm">Faculty Of Media&Technology</h2>
                 <p>Offering a comprehensive mix of media, Arts, Music, video and Performance  programming students train to become skilled professionals as a field of their choice .</p>
@@ -29,7 +29,7 @@ export default class About extends Page {
             </div>
         </div>
         <div class="course_block">
-        <img src="/img/accounting.jpg" alt="accountingImage" class="courseimg">
+        <img src="/img/business1.jpg" alt="accountingImage" class="courseimg">
                 <div class="course_content">
                     <h2 class="coursenm">Faculty Of Business</h2>
                    <p>Covering over douzen of business fields, student recive relavent, hands-on education, giving them skills to suceed ,student recive relavent, hands-on education,.</p>

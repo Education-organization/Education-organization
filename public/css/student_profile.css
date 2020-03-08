@@ -78,9 +78,9 @@
             }
             
             @media screen and (min-width: 768px) {
-                main{
+                /* main{
                     padding:3em 20em;
-                }
+                } */
                 .structure {
                     display: grid;
                     grid-template-columns: 1fr 4fr;
