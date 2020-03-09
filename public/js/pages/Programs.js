@@ -1,4 +1,35 @@
 import Page from '../page.js'
+const students = [{
+  profilePicture: `/img/dimpy.jpg`,
+  firstName: `Dimpy`,
+  program: `webdesign`,
+  
+},
+{
+  
+  profilePicture: `/img/bhawan.jpg`,
+  firstName: `Bhawan`,
+  program: `wireless`,
+  
+}, {
+  
+  profilePicture: `/img/shreya.jpg`,
+  firstName: `Shreya`,
+  program: `multimedia`,
+  
+}, {
+  
+  profilePicture: `/img/user2.png`,
+  firstName: `User`,
+  program: `wireless`,
+  
+}, {
+  
+  profilePicture: `/img/user6.png`,
+  firstName: `User`,
+  program: `multimedia`,
+  
+}];
 
 export default class Programs extends Page {
     constructor() {
@@ -61,10 +92,10 @@ export default class Programs extends Page {
         if (path[0] == 'webdesign') {
             $info.innerHTML = `<article class="program-desc">
             <div class="program-image1">
-            <div class="program-highlight">
-              <h2>Web Design And Development</h2>
-              <p>CERTIFICATE OF ACHIEVEMENT | CODE: WDD911</p>
-            </div>
+             <div class="program-highlight">
+               <h2>Web Design And Development</h2>
+               <p>CERTIFICATE OF ACHIEVEMENT | CODE: WDD911</p>
+             </div>
             </div>
             <div class="about-pro">
             <strong> <h3>About the Program </h3></strong>
@@ -80,10 +111,10 @@ export default class Programs extends Page {
       
             $info.innerHTML = `<article class="program-desc">
             <div class="program-image2">
-            <div class="program-highlight">
-              <h2>Wireless Telecommunication</h2>
-              <p>CERTIFICATE OF ACHIEVEMENT | CODE: WMC711</p>
-            </div>
+             <div class="program-highlight">
+               <h2>Wireless Telecommunication</h2>
+               <p>CERTIFICATE OF ACHIEVEMENT | CODE: WMC711</p>
+             </div>
             </div>
             <div class="about-pro">
             <strong> <h3>About the Program </h3></strong>
@@ -98,10 +129,10 @@ export default class Programs extends Page {
         } else if (path[0] == 'multimedia') {
             $info.innerHTML = `<article class="program-desc">
             <div class="program-image3">
-            <div class="program-highlight">
-              <h2>Visual and Digital Arts </h2>
-              <p>CERTIFICATE OF ACHIEVEMENT | CODE: MDD811</p>
-            </div>
+             <div class="program-highlight">
+               <h2>Visual and Digital Arts </h2>
+               <p>CERTIFICATE OF ACHIEVEMENT | CODE: MDD811</p>
+             </div>
             </div>
             <div class="about-pro">
             <strong> <h3>About the Program </h3></strong>
@@ -109,6 +140,9 @@ export default class Programs extends Page {
             You will be constantly challenged to learn more through the escalating curriculum, while working in our dedicated computer lab. You will be guided by experienced faculty and industry professionals who are passionate about the web and related media in a practical, hands-on style of teaching. Opportunities to network with potential employers, alumni and other professionals will help you to build your own network of invaluable contacts to shape your future career.
            This program is not eligible for Ontario Student Assistance Program (OSAP). It is eligible for Second Career Funding. Further details and how to apply are found at ontario.ca/page/second-career.</p>
           </div>
+          <div>
+          <a href="students/multimedia"><button class="about-explore-btn">Find Students who are enrolled in this program </button></a>
+          </div
           </article>`
         }
 
