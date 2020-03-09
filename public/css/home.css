@@ -1,88 +1,108 @@
-
-
-.advortizement{
-  background-image: url(../img/Humber_College_LRC_North.jpg);
-  display: block;
-  background-size:cover;
-  background-repeat: no-repeat;
-  height: 30em;
-  /* margin: -2em; */
-
-}
-
-.course-container{
-  display: grid;
-  grid-gap: 1em;
-}
-.course_block{
-  background-color: lightgray;
-  box-shadow: 12px 29px 81px 0px rgba(0,0,0,0.75); 
-  text-align: center;
- }
-.courseimg{
-  max-width: 25em;
-  max-height: 15em;
-}
-.type{
-  text-align: center;
-}
-.quote{
-  width: 100%;
-  line-height: 1em;
-  font-size: 2em;
-  margin: 1em;
-  padding: 1em;
-}
-/* Tablet */
-@media screen and (min-width: 40em) {
-  .advortizement{
-    background-image: url(../img/Humber_College_LRC_North.jpg);
-  background-repeat: no-repeat;
-  height: 30em;
-  background-size:cover;
-  }
-  .course-container{
-   grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-  }
-  .quote{
-    width: 100%;
-    line-height: 1em;
-    font-size: 2em;
-    margin: 1em;
-    padding: 1em;
-  }
-}
-/* Desktop */
-@media screen and (min-width: 60em) {
-
-  .advortizement{
+.advortizement {
     background-image: url(../img/Humber_College_LRC_North.jpg);
     display: block;
-   background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
-   height: 30em;
-   margin: -2em;
-  }
-  .course-container{
-    grid-template-columns: 1fr 1fr 1fr;
-     grid-gap: 1.5em;
-    
-   }
-   .course_block{
+    height: 30em;
+    /* margin: -2em; */
+}
+
+.course-container {
+    display: grid;
+    grid-gap: 1em;
+}
+
+.course_block {
     background-color: lightgray;
-    box-shadow: 12px 29px 81px 0px rgba(0,0,0,0.75); 
+    box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
     text-align: center;
-   }
-   .courseimg{
-     max-width: 25em;
-     max-height: 15em;
-   }
-   .quote{
+}
+
+.courseimg {
+    max-width: 25em;
+    max-height: 15em;
+}
+
+.type {
+    text-align: center;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 0.9375em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 2em;
+}
+
+.quote {
     width: 100%;
     line-height: 1em;
     font-size: 2em;
     margin: 1em;
     padding: 1em;
-  }
+}
+
+
+/* Tablet */
+
+@media screen and (min-width: 40em) {
+    .advortizement {
+        background-image: url(../img/Humber_College_LRC_North.jpg);
+        background-repeat: no-repeat;
+        height: 30em;
+        background-size: cover;
+    }
+    .course-container {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+    }
+    .quote {
+        width: 100%;
+        line-height: 1em;
+        font-size: 2em;
+        margin: 1em;
+        padding: 1em;
+    }
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 60em) {
+    .advortizement {
+        background-image: url(../img/Humber_College_LRC_North.jpg);
+        display: block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50em;
+        /* margin: -2em; */
+    }
+    .course-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 7em;
+        margin: 0 35em;
+        align-self: center;
+    }
+    .course_block {
+        background-color: lightgray;
+        box-shadow: 12px 29px 81px 0px rgba(0, 0, 0, 0.75);
+        text-align: center;
+        min-width: 28em;
+    }
+    .courseimg {
+        min-width: 28em;
+        min-height: 18em;
+    }
+    .quote {
+        width: 100%;
+        line-height: 1em;
+        font-size: 2em;
+        margin: 1em;
+        padding: 1em;
+    }
 }

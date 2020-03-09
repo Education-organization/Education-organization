@@ -5,7 +5,7 @@
                 margin: 0;
                 font-family: Verdana;
             }
-           
+            
             a {
                 color: black;
                 text-decoration: none;
@@ -43,12 +43,15 @@
                 padding: 5px;
                 text-align: left;
             }
-            th{
-                width:10em;
+            
+            th {
+                width: 10em;
             }
-            .gen_info{
+            
+            .gen_info {
                 padding: 1em 0;
             }
+            
             .structure {
                 display: grid;
                 grid-template-columns: 1fr;
@@ -95,8 +98,8 @@
                     border-radius: 50%;
                 }
             }
-            @media screen and (min-width: 2000px) {
+            /* @media screen and (min-width: 2000px) {
                 main{
                     padding:3em 40em;
                 }
-            }
+            } */

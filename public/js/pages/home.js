@@ -5,7 +5,7 @@ export default class About extends Page {
         this.html = `
         <section class="main">
       <article class="advortizement">
-        <b>Summer course Application started <input type="button" name="button" value="Apply"></b>
+       
       </article>
       
      
