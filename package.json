@@ -1,5 +1,5 @@
 {
-  "name": "Education-organization",
+  "name": "education-organization",
   "version": "1.0.0",
   "description": "Team Member Names ---  1) Dimpy Vaidya (N01406287) 2) Bhawanpreet Kaur Sidhu (N01372787) 3)  Shreya Trivedi (n01362595)",
   "main": "index.js",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Education-organization/Education-organization#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^3.1.0"
+    "express-handlebars": "^3.1.0",
+    "index": "^0.4.0"
   }
 }

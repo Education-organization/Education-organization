@@ -65,11 +65,22 @@ export default class Student extends Page {
 			<button id="dosomething" style="display:none;">Click me!</button>
         </header>
         <h2>Find students by programs</h2>
-        <ul class="router">
-        <li><a href="student_profile/webdesign">Web Design and Development</a></li>
-        <li><a href="student_profile/wireless">Wireless Telecommunication</a></li>
-        <li><a href="student_profile/multimedia">Visual and Digital Arts </a></li>    
-        </ul>
+        
+        <ul class="program-row router">
+        <li class="program-name"><a href="student_profile/webdesign">Web Design and Development</a></li>
+        <div class="length"><p>2 Semester</p></div>
+        <div class="location"><p>North</p></div>
+      </ul>
+      <ul class="program-row router">
+        <li class="program-name"><a href="student_profile/wireless">Wireless Telecommunications</a></li>
+        <div class="length"><p>4 Semester</p></div>
+        <div class="location"><p>North</p></div>
+      </ul>
+      <ul class="program-row router">
+        <li class="program-name"><a href="student_profile/multimedia">Visual and Digital Arts </a></li>
+        <div class="length"><p>4 Semester</p></div>
+        <div class="location"><p>North</p></div>
+      </ul>
         <article id="app"></article>`
     }
     registerListeners() {
