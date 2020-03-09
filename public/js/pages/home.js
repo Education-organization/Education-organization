@@ -15,25 +15,25 @@ export default class About extends Page {
             <img src="/img/art.jpg" alt="webDesignImage" class="courseimg">
                 <div class="course_content">
                 
-                    <h2 class="coursenm">The Faculty Of Media&Arts</h2>
+                    <h2 class="coursenm">Visual and Digital Arts</h2>
                     <p>With programs in design and techonoliges Students are prepated to build their professional career in IT field  in most recent techonology trands.</p>
-                    <button class="button">Read More</button><br>
+                    <button class="button"><a href="/public/js/pages/Programs.js">Read More</a></button><br>
                 </div>
             </div>
             <div class="course_block">
             <img src="/img/develop.jpg" alt="ArtsandMedia" class="courseimg">
             <div class="course_content">
-                <h2 class="coursenm">Faculty Of Media&Technology</h2>
+                <h2 class="coursenm">Web Design and Development</h2>
                 <p>Offering a comprehensive mix of media, Arts, Music, video and Performance  programming students train to become skilled professionals as a field of their choice .</p>
-                <button class="button">Read More</button><br>
+                <button class="button"><a href="/public/js/pages/Programs.js">Read More</a></button><br>
             </div>
         </div>
         <div class="course_block">
         <img src="/img/business1.jpg" alt="accountingImage" class="courseimg">
                 <div class="course_content">
-                    <h2 class="coursenm">Faculty Of Business</h2>
+                    <h2 class="coursenm">Wireless Telecommunications</h2>
                    <p>Covering over douzen of business fields, student recive relavent, hands-on education, giving them skills to suceed ,student recive relavent, hands-on education,.</p>
-                    <button class="button">Read More</button><br>
+                    <button class="button"><a href="../Programs.js">Read More</a></button><br>
                 </div>
             </div>
           </div>

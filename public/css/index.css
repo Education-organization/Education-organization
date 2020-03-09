@@ -7,16 +7,17 @@
     border-top: 0.1rem solid rgb(217, 222, 228);
 }
 
+.navbar {
+    display: block;
+    text-align: right;
+    /* margin-right: 3em; */
+}
+
 .logo {
     top: 1em;
     margin: 1em;
     text-align: left;
     max-width: 2em;
-}
-
-.navbar {
-    text-align: right;
-    /* margin-right: 3em; */
 }
 
 .navbar a {
@@ -33,8 +34,9 @@
 }
 
 .navbar li {
-    display: inline-block;
+    /* display: inline-block; */
     /* padding: 2rem; */
+    display: block;
 }
 
 .nabvbar li a {
@@ -122,9 +124,7 @@
         border-top: 0.1rem solid rgb(217, 222, 228);
     }
     .logo {
-        top: 1em;
-        margin: 1em;
-        text-align: left;
+        text-align: center;
     }
     .navbar {
         text-align: right;
@@ -142,8 +142,8 @@
         padding: 0;
     }
     .navbar li {
-        display: inline-block;
-        padding: 2rem;
+        display: block;
+        padding: 0.5em;
     }
     .nabvbar li a {
         display: block;
