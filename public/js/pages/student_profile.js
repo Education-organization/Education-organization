@@ -2,7 +2,7 @@ import Page from '../page.js'
 
 
 const students = [{
-    id: 1001,
+    id: `N01406287`,
     profilePicture: `/img/dimpy.jpg`,
     firstName: `Dimpy`,
     lastName: `Vaidya`,
@@ -11,9 +11,12 @@ const students = [{
     email: `dimpy@gmail.com`,
     skills: `HTML,CSS,JavaScript,NodeJS`,
     projects: `Web Store, E-Forum, Financial Notifier`,
-    githubURL: `https://github.com/dimpyvaidya`
+    standing: `Good`,
+    gpa: `76.4`,
+    githubURL: `https://github.com/dimpyvaidya`,
+    category: `all`
 }, {
-    id: 1002,
+    id: `N01372787`,
     profilePicture: `/img/bhawan.jpg`,
     firstName: `Bhawan`,
     lastName: `Sidhu`,
@@ -22,9 +25,12 @@ const students = [{
     email: `bhawan@gmail.com`,
     skills: `HTML,CSS,NodeJS`,
     projects: `Web Store, Composite`,
-    githubURL: `https://github.com/bhawansidhu`
+    standing: `Good`,
+    gpa: `79`,
+    githubURL: `https://github.com/bhawansidhu`,
+    category: `all`
 }, {
-    id: 1003,
+    id: `N01362595`,
     profilePicture: `/img/shreya.jpg`,
     firstName: `Shreya`,
     lastName: `Trivedi`,
@@ -32,30 +38,53 @@ const students = [{
     contactNo: `6789054321`,
     email: `shreya@gmail.com`,
     skills: `HTML,CSS`,
-    projects: `Web Store, `,
-    githubURL: `https://github.com/shreyatrivedi`
+    projects: `Web Store`,
+    standing: `Good`,
+    gpa: `65`,
+    githubURL: `https://github.com/shreyatrivedi`,
+    category: `all`
 }, {
-    id: 1004,
+    id: `N0123456`,
     profilePicture: `/img/user2.png`,
     firstName: `User`,
-    lastName: `abc`,
+    lastName: `Name`,
     program: `wireless`,
     contactNo: `2134567890`,
     email: `user@gmail.com`,
     skills: `JavaScript,NodeJS`,
     projects: `Project1 `,
-    githubURL: `https://github.com/abc`
+    standing: `Poor`,
+    gpa: `45`,
+    githubURL: `https://github.com/abc`,
+    category: `all`
 }, {
-    id: 1005,
-    profilePicture: `/img/user6.png`,
-    firstName: `User`,
-    lastName: `xyz`,
+    id: `N9087654`,
+    profilePicture: `/img/profile.jpg`,
+    firstName: `Daizy`,
+    lastName: `Parekh`,
     program: `multimedia`,
     contactNo: `0987654321`,
     email: `xyz@gmail.com`,
     skills: `HTML,CSS,JavaScript,NodeJS`,
     projects: `Project2 `,
-    githubURL: `https://github.com/xyz`
+    standing: `Moderate`,
+    gpa: `60`,
+    githubURL: `https://github.com/xyz`,
+    category: `all`
+}, {
+    id: `N9087654`,
+    profilePicture: `/img/user5.png`,
+    firstName: `Darshil`,
+    lastName: `Sharma`,
+    program: `webdesign`,
+    contactNo: `0987654321`,
+    email: `xyz@gmail.com`,
+    skills: `HTML,CSS,JavaScript,NodeJS`,
+    projects: `Project2 `,
+    standing: `Very Good`,
+    gpa: `95`,
+    githubURL: `https://github.com/xyz`,
+    category: `all`
 }];
 export default class Student extends Page {
     constructor() {
@@ -64,22 +93,14 @@ export default class Student extends Page {
         <header>
 			<button id="dosomething" style="display:none;">Click me!</button>
         </header>
-        <h2>Find students by programs</h2>
+        <h2 style="text-align:center;">Find students by programs</h2>
         
-        <ul class="program-row router">
+        <ul class="programs router">
+        <li class="program-name"><a href="student_profile/all">All Students</a></li>
+
         <li class="program-name"><a href="student_profile/webdesign">Web Design and Development</a></li>
-        <div class="length"><p>2 Semester</p></div>
-        <div class="location"><p>North</p></div>
-      </ul>
-      <ul class="program-row router">
-        <li class="program-name"><a href="student_profile/wireless">Wireless Telecommunications</a></li>
-        <div class="length"><p>4 Semester</p></div>
-        <div class="location"><p>North</p></div>
-      </ul>
-      <ul class="program-row router">
-        <li class="program-name"><a href="student_profile/multimedia">Visual and Digital Arts </a></li>
-        <div class="length"><p>4 Semester</p></div>
-        <div class="location"><p>North</p></div>
+            <li class="program-name"><a href="student_profile/wireless">Wireless Telecommunications</a></li>
+            <li class="program-name"><a href="student_profile/multimedia">Visual and Digital Arts </a></li>
       </ul>
         <article id="app"></article>`
     }
@@ -92,34 +113,42 @@ export default class Student extends Page {
     subrequests(path) {
         console.log(path)
         const $app = document.getElementById('app')
-        if (path[0] == 'webdesign') {
-            $app.innerHTML = `<h3>Web Design and Development</h3>
+
+        if (path[0] == 'all') {
+            $app.innerHTML = `<h3 style="text-align:center;"></h3>
     
           <ul class="router">`
+            $app.innerHTML += students.filter(p => p.category == 'all').map(returnStudentCardAsHTML).join("\n");
+
+        } else if (path[0] == 'webdesign') {
+            $app.innerHTML = `<h3 style="text-align:center;">Students from Web Design and Development Program</h3>
+          <ul class="router">
+          `
             $app.innerHTML += students.filter(p => p.program == 'webdesign').map(returnStudentCardAsHTML).join("\n");
 
         } else if (path[0] == 'wireless') {
-            $app.innerHTML = `<h3>Wireless Telecommunication</h3>
+            $app.innerHTML = `<h3 style="text-align:center;"> Students from Wireless Telecommunication Program</h3>
           <ul class="router">
           `
             $app.innerHTML += students.filter(p => p.program == 'wireless').map(returnStudentCardAsHTML).join("\n");
 
         } else if (path[0] == 'multimedia') {
-            $app.innerHTML = `<h3>Visual and Digital Arts </h3>
+            $app.innerHTML = `<h3 style="text-align:center;">Students from Visual and Digital Arts Program</h3>
           <ul class="router">
           `
             $app.innerHTML += students.filter(p => p.program == 'multimedia').map(returnStudentCardAsHTML).join("\n");
         }
+
     }
 }
 
+
 function returnStudentCardAsHTML(student) {
     return `
+    <article class="format">
     <div class="headbar">
-    <h2>${student.firstName} (${student.id})</h2>
-</div>
-<div class="headbar">
-    <p><strong>Term : </strong>Winter 2020 continued | <strong>Standing:</strong> Good Standing | <strong>Overall Hours : </strong>15 | <strong>Overall GPA :</strong> 76.4</p>
+    <h2>${student.firstName} ${student.lastName} (${student.id})</h2>
+    <p><strong>Term : </strong>Winter 2020 continued | <strong>Standing:</strong> ${student.standing} | <strong>Overall Hours : </strong>15 | <strong>Overall GPA :</strong> ${student.gpa}</p>
 </div>
 <main class="structure">
 
@@ -129,79 +158,75 @@ function returnStudentCardAsHTML(student) {
         
         <table style="width:100%">
             <tr>
-                <td><i class="material-icons">mail</i></td>
-                <td>${student.email}</td>
+                <td style="padding-left:3em;"><i class="material-icons">mail</i></td>
+                <td><p>${student.email}</p></td>
                 
             </tr>
                 
                 <tr>
-                    <td><i class="material-icons">phone</i></td>
-                    <td>${student.contactNo}</td>
+                    <td style="padding-left:3em;"><i class="material-icons">phone</i></td>
+                    <td><p>${student.contactNo}</p></td>
                     
                 </tr>
                 <tr>
-                    <td><i class="material-icons">cake</i></td>
-                    <td>June 13, 1994</td>
+                    <td style="padding-left:3em;" ><i class="material-icons">cake</i></td>
+                    <td><p>June 13, 1994</p></td>
                     
                 </tr>
                 
-                <tr>
-                    <th style="width:1em;"><i class="material-icons">person_pin_circle</i></td>
-                    <td>1, Hari villa Street<br>Toronto, Canada<br>L6P4J7</td>
-                    
-                </tr>
+               
         </table>
     </div>
 
     <div>
         <h1>Personal & Academic Details</h1><br>
-        <strong><h2 >General Information</h2></strong>
         <table style="display: inline-block;  float: left; margin:0 5em; " > 
                 <tr > 
                     <th>Level</th>
-                    <td>Post-secondary</td>
+                    <td><p>Post-secondary</p></td>
                 </tr>
                 <tr>
                     <th>Class</th>
-                    <td>Semester 2</td>
+                    <td><p>Semester 2</p></td>
                 </tr>
                 <tr>
                     <th>Residency</th>
-                    <td>International</td>
+                    <td><p>International</p></td>
                 </tr>
                 <tr>
                     <th>Campus</th>
-                    <td>North Campus</td>
+                    <td><p>North Campus</p></td>
                 </tr>
                 <tr>
                     <th>First Term Attended</th>
-                    <td>Fall 2019</td>
+                    <td><p>Fall 2019</p></td>
                 </tr>
         </table>
         <table style="display: inline-block;  margin:0 5em;" > 
                 <tr > 
                     <th>Language command</th>
-                    <td>${student.skills} </td>
+                    <td><p>${student.skills} </p></td>
                 </tr>
                 <tr>
                     <th>Projects</th>
-                    <td>${student.projects}</td>
+                    <td><p>${student.projects}</p></td>
                 </tr>
                 <tr>
                     <th>Github Link</th>
-                    <td>${student.githubURL}</td>
+                    <td><p>${student.githubURL}</p></td>
                 </tr>
                 <tr>
                     <th>Admit Term</th>
-                    <td>Fall 2019</td>
+                    <td><p>Fall 2019</p></td>
                 </tr>
                 
                 <tr>
                 <th>Status</th>
-                <td>Active</td>
+                <td><p>Active</p></td>
             </tr>
         </table><br><br>
         
     </div>
+    </article>
       `
 }
