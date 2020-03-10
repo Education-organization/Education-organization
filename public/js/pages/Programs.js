@@ -1,35 +1,4 @@
 import Page from '../page.js'
-const students = [{
-  profilePicture: `/img/dimpy.jpg`,
-  firstName: `Dimpy`,
-  program: `webdesign`,
-  
-},
-{
-  
-  profilePicture: `/img/bhawan.jpg`,
-  firstName: `Bhawan`,
-  program: `wireless`,
-  
-}, {
-  
-  profilePicture: `/img/shreya.jpg`,
-  firstName: `Shreya`,
-  program: `multimedia`,
-  
-}, {
-  
-  profilePicture: `/img/user2.png`,
-  firstName: `User`,
-  program: `wireless`,
-  
-}, {
-  
-  profilePicture: `/img/user6.png`,
-  firstName: `User`,
-  program: `multimedia`,
-  
-}];
 
 export default class Programs extends Page {
     constructor() {
@@ -49,7 +18,8 @@ export default class Programs extends Page {
     </section>
     <section class="program-list">
       <div class="program-row">
-        <div class="program-name-heading"><a href="#">Program</a>
+        <div class="program-name-heading">
+         <a href="#">Program</a>
         </div>
         <div class="length-heading">
           <p>Length</p>
@@ -57,21 +27,29 @@ export default class Programs extends Page {
         <div class="loc-heading">
           <p>Location</p>
         </div>
+        <div class="enrolled-stu">
+          <p>Enrolled Students</p>
+        </div>
       </div>
       <ul class="program-row router">
         <li class="program-name"><a href="Programs/webdesign">Web Design and Development</a></li>
         <div class="length"><p>2 Semester</p></div>
         <div class="location"><p>North</p></div>
+        <a href="student_profile/webdesign" class="student-list">Student List</a>
       </ul>
+
       <ul class="program-row router">
-        <li class="program-name"><a href="Programs/wireless">Wireless Telecommunications</a></li>
+        <li class="program-name"><a href="Programs/wireless">Wireless Tele-communications</a></li>
         <div class="length"><p>4 Semester</p></div>
         <div class="location"><p>North</p></div>
+       <a href="student_profile/wireless" class="student-list">Student List</a>
       </ul>
       <ul class="program-row router">
         <li class="program-name"><a href="Programs/multimedia">Visual and Digital Arts </a></li>
         <div class="length"><p>4 Semester</p></div>
         <div class="location"><p>North</p></div>
+         <a href="student_profile/multimedia" class="student-list">Student List</a>
+          
       </ul>
       
       <article id="info"></article>
@@ -79,6 +57,7 @@ export default class Programs extends Page {
     }
     registerListeners() {
         console.log('registerListeners() from: Programs')
+        
         document.querySelector('#dosomething').addEventListener('click', event => {
             alert("It worked!")
         })
@@ -87,7 +66,7 @@ export default class Programs extends Page {
         console.log(path) // The path (after the page) as an Array
 
         const $info = document.getElementById('info')
-
+       
         // Depending on the first directive in the URL, load up different content (these can also be Page components!)
         if (path[0] == 'webdesign') {
             $info.innerHTML = `<article class="program-desc">
@@ -103,9 +82,14 @@ export default class Programs extends Page {
             
            This program is not eligible for Ontario Student Assistance Program (OSAP). It is eligible for Second Career Funding. Further details and how to apply are found at ontario.ca/page/second-career.</p>
           </div>
-          </article>`
 
+         
+          </article>`
+         
+         
         }
+
+
         
         else if (path[0] == 'wireless') {
       
@@ -122,6 +106,7 @@ export default class Programs extends Page {
             You will be constantly challenged to learn more through the escalating curriculum, while working in our dedicated computer lab. You will be guided by experienced faculty and industry professionals who are passionate about the web and related media in a practical, hands-on style of teaching. Opportunities to network with potential employers, alumni and other professionals will help you to build your own network of invaluable contacts to shape your future career.
            This program is not eligible for Ontario Student Assistance Program (OSAP). It is eligible for Second Career Funding. Further details and how to apply are found at ontario.ca/page/second-career.</p>
           </div>
+         
           </article>`
 
 
@@ -140,11 +125,11 @@ export default class Programs extends Page {
             You will be constantly challenged to learn more through the escalating curriculum, while working in our dedicated computer lab. You will be guided by experienced faculty and industry professionals who are passionate about the web and related media in a practical, hands-on style of teaching. Opportunities to network with potential employers, alumni and other professionals will help you to build your own network of invaluable contacts to shape your future career.
            This program is not eligible for Ontario Student Assistance Program (OSAP). It is eligible for Second Career Funding. Further details and how to apply are found at ontario.ca/page/second-career.</p>
           </div>
-          <div>
-          <a href="students/multimedia"><button class="about-explore-btn">Find Students who are enrolled in this program </button></a>
-          </div
+          
+          
           </article>`
         }
 
     }
+    
 }
