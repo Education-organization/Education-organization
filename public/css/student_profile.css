@@ -2,11 +2,6 @@
 
 /*For mobile view*/
 
-* {
-    margin: 0;
-    font-family: Verdana;
-}
-
 a {
     color: black;
     text-decoration: none;
@@ -81,15 +76,23 @@ th {
     border-bottom: lightgray;
 }
 
+.programs {
+    margin-left: 1em;
+    margin-right: 1em;
+    display: grid;
+    font-weight: bolder;
+    grid-template-columns: 1fr;
+    padding: 0;
+    list-style-type: none;
+    border-bottom: 1px solid rgb(177, 167, 167);
+}
+
+.format {
+    background-color: aliceblue;
+    /* margin: 0.5em 10em; */
+}
+
 @media screen and (min-width: 40em) {
-    .structure {
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        grid-gap: 0.8em;
-        color: black;
-        margin-top: 1em;
-        margin-left: 1em;
-    }
     .profile_pic {
         height: 40%;
         width: 80%;
@@ -103,11 +106,11 @@ th {
         font-size: 1.2em;
     }
     .programs {
-        margin-left: 13em;
-        margin-right: 13em;
+        margin-left: 7em;
+        margin-right: 7em;
         display: grid;
         font-weight: bolder;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         padding: 0;
         list-style-type: none;
         border-bottom: 1px solid rgb(177, 167, 167);
@@ -118,5 +121,34 @@ th {
     .format {
         background-color: aliceblue;
         margin: 0.5em 10em;
+    }
+    .programs {
+        margin-left: 13em;
+        margin-right: 13em;
+        display: grid;
+        font-weight: bolder;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0;
+        list-style-type: none;
+        border-bottom: 1px solid rgb(177, 167, 167);
+    }
+    .structure {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 0.8em;
+        color: black;
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    .students-image {
+        background-image: url("/img/students_banner.jpg");
+        background-size: cover;
+        width: auto;
+        height: 40em;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        opacity: 0.8;
+        border-bottom: 2em solid rgb(241, 239, 237);
+        box-shadow: 1px 1px 2px 2px rgba(211, 211, 214, 0.5);
     }
 }

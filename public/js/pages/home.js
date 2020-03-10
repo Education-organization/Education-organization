@@ -40,6 +40,8 @@ export default class About extends Page {
       <article class="quote">
         <b>Just because something doesn’t do what you planned it to do doesn’t mean it’s useless. - Thomas Edison (Inventor)</b>
       </article>
+      <h2 style="text-align:center;">Quick tour of Humber</h2>
+	<iframe class="humber" src="https://youtube.com/embed/38QHWcQM4yI"></iframe>
     </section>`
     }
 }

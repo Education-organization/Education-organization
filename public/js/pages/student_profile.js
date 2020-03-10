@@ -93,19 +93,22 @@ export default class Student extends Page {
         <header>
 			<button id="dosomething" style="display:none;">Click me!</button>
         </header>
-        <h2 style="text-align:center;">Find students by programs</h2>
-        
+        <div class="students-image"> 
+      <div >
+        <h1 style="text-align:center;color:red;">Humber Students</h1>
+      </div>
+      </div>
+      <h1 style="text-align:center;color:red;">Click the below link to see the students </h1>
         <ul class="programs router">
-        <li class="program-name"><a href="student_profile/all">All Students</a></li>
-
-        <li class="program-name"><a href="student_profile/webdesign">Web Design and Development</a></li>
+            <li class="program-name"><a href="student_profile/all">All Students</a></li>
+            <li class="program-name"><a href="student_profile/webdesign">Web Design and Development</a></li>
             <li class="program-name"><a href="student_profile/wireless">Wireless Telecommunications</a></li>
             <li class="program-name"><a href="student_profile/multimedia">Visual and Digital Arts </a></li>
       </ul>
         <article id="app"></article>`
     }
     registerListeners() {
-        console.log('registerListeners() from: student_profile')
+        console.log('registerListeners() from: student_profile/all')
         document.querySelector('#dosomething').addEventListener('click', event => {
             alert("It worked!")
         })
@@ -156,7 +159,7 @@ function returnStudentCardAsHTML(student) {
         <img src="${student.profilePicture}" class="profile_pic">
 <br>
         
-        <table style="width:100%">
+        <table >
             <tr>
                 <td style="padding-left:3em;"><i class="material-icons">mail</i></td>
                 <td><p>${student.email}</p></td>
@@ -182,46 +185,46 @@ function returnStudentCardAsHTML(student) {
         <h1>Personal & Academic Details</h1><br>
         <table style="display: inline-block;  float: left; margin:0 5em; " > 
                 <tr > 
-                    <th>Level</th>
+                    <th><p>Level</p></th>
                     <td><p>Post-secondary</p></td>
                 </tr>
                 <tr>
-                    <th>Class</th>
+                    <th><p>Class</p></th>
                     <td><p>Semester 2</p></td>
                 </tr>
                 <tr>
-                    <th>Residency</th>
+                    <th><p>Residency</p></th>
                     <td><p>International</p></td>
                 </tr>
                 <tr>
-                    <th>Campus</th>
+                    <th><p>Campus</p></th>
                     <td><p>North Campus</p></td>
                 </tr>
                 <tr>
-                    <th>First Term Attended</th>
+                    <th><p>First Term Attended</p></th>
                     <td><p>Fall 2019</p></td>
                 </tr>
         </table>
         <table style="display: inline-block;  margin:0 5em;" > 
                 <tr > 
-                    <th>Language command</th>
+                    <th><p>Language command</p></th>
                     <td><p>${student.skills} </p></td>
                 </tr>
                 <tr>
-                    <th>Projects</th>
+                    <th><p>Projects</p></th>
                     <td><p>${student.projects}</p></td>
                 </tr>
                 <tr>
-                    <th>Github Link</th>
+                    <th><p>Github Link</p></th>
                     <td><p>${student.githubURL}</p></td>
                 </tr>
                 <tr>
-                    <th>Admit Term</th>
+                    <th><p>Admit Term</p></th>
                     <td><p>Fall 2019</p></td>
                 </tr>
                 
                 <tr>
-                <th>Status</th>
+                <th><p>Status</p></th>
                 <td><p>Active</p></td>
             </tr>
         </table><br><br>
